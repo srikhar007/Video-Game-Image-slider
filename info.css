@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-image: url(./images/1364877.png);
+}
+
+.information h1{
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+.data .one{
+    background-color: blueviolet;
+    font-family: poppins;
+    color: white;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-left: 30%;
+}
+
+.data .one img{
+    height: 150px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.data .two{
+    background-color: blueviolet;
+    font-family: poppins;
+    color: white;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.data .two img{
+    height: 150px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+
+.data .three{
+    background-color: blueviolet;
+    font-family: poppins;
+    color: white;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-left: 30%;
+}
+
+.data .three img{
+    height: 150px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.data .four{
+    background-color: blueviolet;
+    font-family: poppins;
+    color: white;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.data .four img{
+    height: 150px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.data .five{
+    background-color: blueviolet;
+    font-family: poppins;
+    color: white;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-left: 30%;
+}
+
+.data .five img{
+    height: 150px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+}

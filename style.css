@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: poppins;
+    background-color: lightblue;
+    font-size: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a{
+    margin-right: 45px;
+    font-size: 20px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+.container .list .item{
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.container .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .list .item .content{
+    position: absolute;
+    top: 25%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translatex(-50%);
+    color: white;
+}
+
+.container .list .item .content .inventor{
+    font-weight: bold;
+    letter-spacing: 15px;
+}
+
+.container .list .item .content .title,
+.container .list .item .content .topic{
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+.container .list .item .content .topic{
+    color: red;
+}
+
+.container .list .item .content .buttons{
+    display: grid;
+    grid-template-columns: repeat(2,130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.container .list .item .content button{
+    border: none;
+    background-color: violet;
+    letter-spacing: 3px;
+    font-family: poppins;
+    font-weight: 500;
+    border-radius: 20px;
+}
+
+.container .list .item .content .button:hover{
+    background-color: thistle;
+    transition: 1s;
+}
+
+.container .list .item .content button:nth-child(2){
+    background-color: aquamarine;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+.tumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.tumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.tumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.tumbnail .item .content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+}
+
+.tumbnail .item .content .title{
+    font-weight: bold;
+}
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 100;
+}
+
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightblue;
+    border: none;
+    font-family: monospace;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    margin-top: 50px;
+}
+
+.arrows button:hover{
+    background-color: blueviolet;
+    color: aqua;
+
+}
+
+
+.container .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.container .list .item:nth-child(1) .inventor,
+.container .list .item:nth-child(1) .title,
+.container .list .item:nth-child(1) .topic,
+.container .list .item:nth-child(1) .des,
+.container .list .item:nth-child(1) .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showConcent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showConcent {
+
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+    
+}
+
+.container .list .item:nth-child(1) .title{
+    animation-delay: 1.2s;
+}
+
+.container .list .item:nth-child(1) .topic{
+    animation-delay: 1.4s;
+}
+
+.container .list .item:nth-child(1) .des{
+    animation-delay: 1.6s;
+}
+
+.container .list .item:nth-child(1) .btn{
+    animation-delay: 1.8s;
+}
+
+
+.container.next .list .item:nth-child(1) img{
+
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s linear 1 forwards;
+
+}
+
+@keyframes showImage {
+    to{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }   
+}
+
+.container.next .tumbnail .item:nth-last-child(1){
+  width: 0;
+  overflow: hidden;
+  animation: showTumbnail .5s linear 1 forwards;
+}
+
+@keyframes showTumbnail {
+    to{
+        width: 150px;
+    } 
+}
+
+.container.next .tumbnail{
+    transform: translateX(150px);
+    animation: transformTumbnail .5s linear 1 forwards;
+}
+
+@keyframes transformTumbnail {
+    to{
+        transform: translateX(0);
+    }
+}
+
+.container.prev .list .item:nth-child(2){
+    z-index: 2 ;
+}
+
+.container.prev .list .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+    to{
+        width: 150px;
+        height: 220px;
+        border-radius: 20px;
+        left: 50%;
+        bottom: 50px;
+    }  
+}
+
+.container.prev .tumbnail .item:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showTumbnail 0.5s linear 1 forwards;
+}
+
+.container.prev .list .item:nth-child(2) .inventor,
+.container.prev .list .item:nth-child(2) .title,
+.container.prev .list .item:nth-child(2) .topic,
+.container.prev .list .item:nth-child(2) .des,
+.container.prev .list .item:nth-child(2) .buttons{
+    animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    
+}
+
+.container.next .arrows button,
+.container.prev .arrows button{
+  pointer-events: none;
+}
+
+.time{
+    width: 0;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.container.next .time,
+.container.prev .time{
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+    to{
+        width: 0;
+    }
+    
+}
+
+@media screen and (max-width: 678px) {
+    .container .list .item .content{
+        padding-right: 0;
+    }
+    .container .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+.container .list .item .content .des p{
+    height: 50px;
+    width: 550px;
+    margin-bottom: 10px;
+}
